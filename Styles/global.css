@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+/* Card Styles */
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.card:hover .product-info {
+  bottom: 0;
+}
+
+.v-icon {
+  display: flex;
+  align-items: flex-end;
+}
+
+.v-icon p {
+  margin-left: 5px;
+}
+
+.v-icon img {
+  width: 15px;
+  height: 15px;
+  display: inline;
+  padding: 2px 0;
+}
+
+.product-info {
+  position: absolute;
+  width: 100%;
+  height: 195px;
+  border-top-right-radius: 50px;
+  background: #21222dfa;
+  bottom: 0px;
+  bottom: -105px;
+  transition: 0.5s;
+}
+
+.product-inner-info {
+  width: 270px;
+  margin-top: 15px;
+  text-align: left;
+  color: #fff;
+  margin-left: 15px;
+}
+
+.product-inner-info p {
+  margin-top: 5px;
+  color: #4f5159;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.price-buy {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-buy form {
+  width: 85%;
+  text-align: right;
+}
+
+.price-buy input {
+  color: #fff;
+  background: #33323a;
+  padding: 10px;
+  width: 85%;
+  border: none;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.price-buy input:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 50px 0 #4f5159;
+}
+
+.items-list {
+  margin: auto;
+  width: 85%;
+  display: grid;
+  justify-content: center;
+  gap: 25px;
+  grid-template-columns: repeat(4, 300px);
+}
+
+.AdminCard {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.AdminCard input {
+  border: none;
+  color: #fff;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.AdminCard input[name="Remove"] {
+  background: red;
+}
+
+.AdminCard input[name="update"] {
+  background: #20c0ed;
+  margin-right: 5px;
+}
+
+.EditMode {
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.734);
+  position: fixed;
+  top: 0;
+}
+
+.Edit-Wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
+  background: #25272bec;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.Edit-Main-Wrapper {
+  max-height: 450px;
+  max-width: 800px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.rightSection a {
+  font-weight: 600;
+  color: red;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.Edit-Content {
+  width: 96%;
+  height: 94%;
+  display: flex;
+  gap: 25px;
+}
+
+.LeftSection img {
+  width: 350px;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.LeftSection {
+  width: 100%;
+  position: relative;
+}
+
+.rightSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rightSection input {
+  padding: 10px 10px 10px 0px;
+  background: none;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  outline: none;
+}
+
+.rightSection .column {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column input {
+  width: 75%;
+}
+
+.column select {
+  width: 100%;
+}
+
+.rightSection select {
+  padding: 10px 10px 10px 0px;
+  background: none;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  outline: none;
+}
+
+.rightSection option {
+  background: #4f5159;
+}
+
+.rightSection input[type="submit"] {
+  width: 40%;
+  margin-left: auto;
+  border: none;
+  background: red;
+  border-radius: 5px;
+}
+
+.rightSection textarea {
+  padding: 10px;
+  resize: none;
+  background: #2f3135e0;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+
+.LeftSection input {
+  position: absolute;
+  left: 0;
+  /* width: 100%;
+    height: 100%; */
+  background: green;
+  display: none;
+}
+
+.LeftSection label:hover {
+  background-image: url("../images/pen.png");
+  background-size: 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #00000072;
+  cursor: pointer;
+}
+
+.LeftSection label {
+  width: 350px;
+  height: 430px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.AlertMessage {
+  z-index: 15;
+  margin-top: 25px;
+  max-width: 400px;
+  width: 100%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeOutAlert 0.5s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+.alert {
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.alertsuccess {
+  background-color: #04aa6d;
+}
+
+.alertError {
+  background-color: #f44336;
+}
+
+.Continue {
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  background-color: #33323a;
+  width: 100%;
+  max-width: 500px;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 45px;
+}
+
+.Continue button {
+  padding: 10px;
+  border: none;
+  background: #f44336;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+#ContinueButton {
+  background: #04aa6d;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@keyframes fadeOutAlert {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1331px) {
+  .items-list {
+    grid-template-columns: repeat(3, 300px);
+  }
+}
+
+@media (max-width: 992px) {
+  .items-list {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 650px) {
+  .items-list {
+    grid-template-columns: repeat(1, 300px);
+  }
+
+  .Continue {
+    flex-direction: column;
+    max-width: 250px;
+    gap: 15px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media (max-width: 860px) {
+  .Edit-Content {
+    flex-direction: column;
+  }
+
+  .LeftSection img {
+    width: 50%;
+    height: 150px;
+  }
+
+  .Edit-Wrapper {
+    position: relative;
+  }
+
+  .LeftSection label {
+    width: 50%;
+    height: 150px;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .LeftSection img {
+    display: none;
+  }
+
+  .item-info {
+    margin-bottom: 25px;
+  }
+
+  .item-info h4 {
+    width: 100%;
+    /* width: 100%; */
+    margin-bottom: auto;
+  }
+}

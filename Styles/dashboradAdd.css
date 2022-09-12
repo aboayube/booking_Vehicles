@@ -1,0 +1,153 @@
+
+    body{
+        /* overflow-x: hidden; */
+    }
+    .header{
+        
+    display: flex;
+    margin-top: 29px;
+    justify-content: space-around;
+    margin-left: -98px;
+    }
+    .header  h1{
+        
+    margin-left: 90px;    font-size: 28px;
+    }
+    
+    .data {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #eee;
+    }
+
+    .items {
+        padding: 2px;
+        background-color: #fff;
+        border-radius: 20px;
+
+        width: 41%;
+        margin: auto;
+
+    }
+    label{
+    font-style: 18px !important; 
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+    padding: 20px;
+    margin-left: -170px;
+
+}
+    input[type=text],
+    input[type=number],
+    select,
+    #password,
+    textarea {
+        width: 300px;
+        margin-left: -149px;
+        padding: 12px 20px;
+        margin-top:15px;
+        margin-bottom: 15px;
+        display: block;
+        border: 1px solid #000;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+ /*    input[type=submit] {
+        width: 50%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    } */
+    .btn-post{
+        background: #00A78E;
+    width: 120px;
+    height: 40px;
+    margin-left: -57px;margin-bottom:20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;color: white;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+    form{
+        margin-left: 300px;
+    }
+    #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 90%;
+        margin: 20px auto;
+        margin-bottom: 155px;
+        justify-content:center
+    }
+
+    #customers td,
+    #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+        background-color: #ddd;
+    }
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    .addItem {
+
+        color: white;
+        padding: 4px;
+        margin-top: 8px;
+    }
+
+    tr {
+        background: #fff;
+    }
+
+    td{
+        background: #fff;
+    }
+
+    td:hover tr{
+        background: #ddd;
+    }
+td a{
+    display: inherit;
+    color: #00A78E;
+    padding-left: 21px;
+}
+    th {
+
+        color: #000 !important;
+        background: #F8F8FE !important;
+    }
+    td .delete{
+        display: inherit;
+        color: red !important;
+        padding-left: 21px;
+    }
+    .text-center{
+margin-top: 20px;
+    }
+    table{
+        margin-top: 20px !important;
+    }
+ 
